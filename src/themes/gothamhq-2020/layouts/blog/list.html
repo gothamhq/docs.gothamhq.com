@@ -1,0 +1,24 @@
+{{ define "main" }}
+<main class="list">
+	<h1>{{ .Title }}</h1>
+	{{ if .Content }}<div class="content-body">{{ .Content }}</div>{{ end }}
+	{{ range where (.Paginate .Pages.ByDate.Reverse).Pages "Type" "blog" }}
+		<article id="{{ .File.UniqueID }}">
+			<header>
+				<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+				<span class="posted-on">Posted on <time datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</time></span>
+				<span class="author">by {{ (index .Site.Data.people .Params.author).name }}</span>
+			</header>
+			<div class="content">
+				{{ .Summary }}
+			{{ if .Truncated }}
+			<a class="read-more" href="{{ .Permalink }}">continue&nbsp;reading&nbsp;<span class="fas fa-chevron-right"></span></a>
+			{{ end }}
+			</div>
+			<footer>
+			</footer>
+		</article>
+	{{ end }}
+	{{ partial "pager" . }}
+</main>
+{{ end }}

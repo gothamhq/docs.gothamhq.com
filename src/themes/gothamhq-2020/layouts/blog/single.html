@@ -1,0 +1,18 @@
+{{ define "main" }}
+<main class="single">
+<article id="{{ .File.UniqueID }}">
+	<header>
+		<h1>{{ .Title }}</h1>
+		<span class="posted-on">Posted on <time datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</time> by {{ (index .Site.Data.people .Params.author).name }}</span>
+	{{ if and (.Params.feature) (ne .Params.featureHide true) }}
+		<img class="feature{{ if .Params.featureClass }} {{ .Params.featureClass }}{{ end }}" src="/media/blog/featured/{{ .Params.feature }}" alt="" />
+	{{ end }}
+	</header>
+	<div class="content">{{ .Content }}</div>
+</article>
+{{ if eq (getenv "HUGO_ENV") "production" }}
+	{{ partial "discourse-comments" . }}
+{{ end }}
+</main>
+{{ partial "share-buttons" . }}
+{{ end }}

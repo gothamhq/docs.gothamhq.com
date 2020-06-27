@@ -1,0 +1,63 @@
+.aligncenter{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	clear: both;
+}
+
+.alignleft{
+	float: left;
+	margin-right: 1.5rem;
+}
+
+.alignright{
+	float: right;
+	margin-left: 1.5rem;
+}
+
+.button{
+	display: inline-block;
+	margin: 2px;
+	border-radius: 5px;
+	background-color: $secondary-color;
+	padding: 8px 20px;
+	color: white !important;
+	text-decoration: none;
+
+	&:hover{
+		opacity: 0.9;
+	}
+}
+
+.redBorderTop{
+	border-top: 4px solid $gothamRed;
+}
+
+figure{
+	margin: 0;
+}
+figure.large{
+	max-width: 700px;
+}
+figure.medium{
+	max-width: 500px;
+}
+figure.small{
+	max-width: 300px;
+}
+figure.half{
+	max-width: 50%;
+}
+figure.third{
+	max-width: 33%;
+}
+figure.quarter{
+	max-width: 25%;
+}
+
+.clear-section{
+	clear: both;
+	width: 100%;
+	visibility: hidden;
+}

@@ -1,0 +1,16 @@
+<script type="text/JavaScript">
+	function validate(){
+
+		if( document.forms[ "mc-embedded-subscribe-form" ][ "EMAIL" ].value == "" ) {
+			alert( "Please provide an email address to submit." );
+			return false;
+		}
+
+		return true;
+	}
+</script>
+<form action="{{ .Site.Params.mailchimpURL }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" onsubmit="return validate();">
+	<input type="email" placeholder="Enter email to signup" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+	<input type="hidden" value="{{ .Section | title }}" name="BRANCH" class="required" id="mce-BRANCH">
+	<input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+</form>

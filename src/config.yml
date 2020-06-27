@@ -1,0 +1,33 @@
+baseurl: "https://docs.gothamhq.com/"
+title: "Gotham Docs"
+theme: gothamhq-2020
+
+googleAnalytics: ""
+
+enableEmoji: true
+
+params:
+  description: "Documentation for the Gotham static site generator."
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+menu:
+  main:
+    - name: "Using Gotham"
+      url: "/gotham/"
+      weight: 5
+    - name: "Gotham Dev"
+      url: "/gotham/"
+      weight: 10
+    - name: "Reference"
+      weight: 15
+  gotham:
+    - name: "Quickstart"
+      identifier: quickstart
+      weight: 5
+    - name: "Manual"
+      identifier: manual
+      weight: 10

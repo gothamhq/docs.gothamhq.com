@@ -1,0 +1,10 @@
+<script type="text/JavaScript" src="{{ "vendor/jquery/jquery-3.5.1.min.js" | absURL }}"></script>
+<script type="text/JavaScript" src="{{ "vendor/font-awesome-5.13.1/js/brands.min.js" | absURL }}" defer></script>
+<script type="text/JavaScript" src="{{ "vendor/font-awesome-5.13.1/js/solid.min.js" | absURL }}" defer></script>
+<script type="text/JavaScript" src="{{ "vendor/font-awesome-5.13.1/js/fontawesome.min.js" | absURL }}" defer></script>
+<script type="text/JavaScript" src="{{ "assets/js/main.js" | absURL }}"></script>
+{{ with .Page.Params.js }}
+	{{ range . }}
+		<script src="{{ . }}" crossorigin=""></script>
+	{{ end }}
+{{ end }}

@@ -1,0 +1,53 @@
+@import "colors";
+
+main{
+	flex-grow: 1;
+	padding-top: 70px; /* To counter the fixed nav bar */
+}
+
+
+
+#tile-grid{
+	margin: 100px auto 20px;
+	display: grid;
+	grid-template-columns: 33.3% 33.3% 33.3%;
+	column-gap: 20px;
+	grid-template-rows: 200px;
+	row-gap: 20px;
+	width: 80%;
+	max-width: 1000px;
+
+	.tile{
+		border-radius: 8px;
+		background: #ffffff;
+		padding: 15px;
+	}
+		#quickstart-tile{
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+}
+
+
+
+/************************************************
+ * <= 1000px width
+ * *********************************************/
+@media(max-width: 1000px){
+	#tile-grid{
+		grid-template-columns: 50.0% 50.0%;
+	}
+}
+
+
+/************************************************
+ * <= 750px width
+ * *********************************************/
+@media(max-width: 750px){
+	#tile-grid{
+		grid-template-columns: 100.0%;
+		#quickstart-tile{
+			grid-column-end: 1;
+		}
+	}
+}

@@ -1,0 +1,76 @@
+html{
+	font-size: 62.5%;
+}
+
+body{
+	color: #1C1C1C;
+	line-height: 1.5;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.8rem;
+
+	a{
+		color: $primary-color;
+	}
+}
+
+body > header{
+
+	color: #ffffff;
+
+	.site-title{
+		font-size: 2.0rem;
+		font-weight: bold;
+	}
+
+	a{
+		color: #ffffff;
+		text-decoration: none;
+	}
+
+	ul.menu li.active > a{
+		font-weight: bold;
+	}
+
+	nav.section,
+	nav.section a{
+		color: white;
+	}
+}
+
+
+main{
+	h1,
+	h2,
+	h3,
+	h4,
+	h5{
+	}
+
+	h1{
+		text-align: center;
+		text-decoration: none;
+		font-size: 3.5rem;
+	}
+
+	h2{
+		margin-bottom: 0;
+		font-size: 2.9rem;
+	}
+
+	.content a{
+		color: $tertiary-color;
+		font-weight: bold;
+	}
+
+	a.continue{
+		font-weight: bold;
+	}
+
+	a.comment{
+		font-weight: bold;
+	}
+}
+
+body > footer{
+	font-size: 1.5rem;
+}

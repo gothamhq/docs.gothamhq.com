@@ -1,0 +1,33 @@
+<script type="text/JavaScript">
+	function validate(){
+
+		if( document.forms[ "mc-embedded-subscribe-form" ][ "EMAIL" ].value == "" ) {
+			alert( "Please provide an email address to submit." );
+			return false;
+		}
+
+		if( document.forms[ "mc-embedded-subscribe-form" ][ "BRANCH" ].value == "" ) {
+			alert( 'Please choose a military branch or choose "Non-military".' );
+			return false;
+		}
+
+		return true;
+	}
+</script>
+<form action="{{ .Site.Params.mailchimpURL }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" onsubmit="return validate();">
+	<input type="email" placeholder="Enter email to signup" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+	<input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+	<div class="mc-field-group">
+		<label for="mce-BRANCH">Which branch?  <span class="asterisk">*</span>
+		</label>
+		<select name="BRANCH" class="required" id="mce-BRANCH">
+			<option value=""></option>
+			<option value="Navy">Navy</option>
+			<option value="Army">Army</option>
+			<option value="Marines">Marines</option>
+			<option value="Air Force">Air Force</option>
+			<option value="Coast Guard">Coast Guard</option>
+			<option value="Non-military">Non-military</option>
+		</select>
+	</div>
+</form>

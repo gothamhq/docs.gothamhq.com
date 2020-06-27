@@ -1,0 +1,20 @@
+{{ $currentPage := . }}
+<header>
+	<nav id="main-nav">
+		<a class="site-title" href="{{ .Site.BaseURL  }}">
+			<img src="/assets/img/logos/logo-docs.svg" />
+		</a>
+		<a class="toggle"><span class="fas fa-bars"></span></a>
+		<ul class="menu h main">
+			<li><a href="{{ .Site.BaseURL  }}"><i class="fas fa-home"></i></a></li>
+			{{- $urlPart1 := print "/" (index (split .Permalink "/") 3) "/" -}}
+		{{ range .Site.Menus.main }}
+				<li class="{{ if or ($currentPage.IsMenuCurrent "main" .) (eq ($urlPart1 | lower) (.URL | lower)) }}active{{end}}">
+					<a href="{{ .URL }}">{{ .Name }}</a>
+				</li>
+		{{ end }}
+		</ul>
+		<div>
+		</div>
+	</nav>
+</header>

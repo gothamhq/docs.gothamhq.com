@@ -1,0 +1,36 @@
+main.single{
+	display: flex;
+	margin: 0;
+
+	nav,
+	aside{
+		flex-shrink: 0;
+		background-color: #F5F5F5;
+	}
+
+	nav{
+		width: 250px;
+	}
+
+	#main{
+		flex-grow: 1;
+
+		div.content{
+			p {
+				padding: 0 20px;
+			}
+
+		}
+	}
+
+	aside{
+		padding: 0 10px;
+		width: 225px;
+
+		.page-tools{
+			padding: 0 0 0 10px;
+			list-style: none;
+		}
+
+	}
+}
