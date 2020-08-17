@@ -9,7 +9,7 @@ This is the public repository for <https://Docs.GothamHQ.com>, a static website 
 You can run this website locally by cloning this repo and serving it with Gotham.
 
 ```
-git clone https://github.com/gothamhq/docs.gothamhq.com.git
+git clone --recurse-submodules https://github.com/gothamhq/docs.gothamhq.com.git
 cd docs.gothamhq.com
 gotham -s src serve --open
 ```
