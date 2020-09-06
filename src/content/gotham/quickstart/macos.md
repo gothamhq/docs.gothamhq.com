@@ -115,4 +115,4 @@ It is simple. Just call:
 gotham
 ```
 
-The output will be in `./public/` directory by default. Use the `-d/--destination` flag to change it or set `publishdir` in the config file.
+The output will be in `./public/` directory by default. Use the `-d/--destination` flag to change it or set `publishDir` in the config file.
