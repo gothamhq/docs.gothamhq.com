@@ -1,5 +1,5 @@
-baseurl: "https://docs.gothamhq.com/"
-title: "Gotham Docs"
+baseurl: "https://docs.StrawberrySSG.com/"
+title: "Strawberry Docs"
 theme: gothamhq-2020
 
 googleAnalytics: ""
@@ -7,7 +7,7 @@ googleAnalytics: ""
 enableEmoji: true
 
 params:
-  description: "Documentation for the Gotham static site generator."
+  description: "Documentation for the Strawberry static site generator."
 
 markup:
   goldmark:
@@ -16,16 +16,16 @@ markup:
 
 menu:
   main:
-    - name: "Using Gotham"
+    - name: "Using Strawberry"
       url: "/gotham/"
       weight: 5
-    - name: "Gotham Dev"
+    - name: "Strawberry Dev"
       url: "/development/"
       weight: 10
     #- name: "Reference"
     #  weight: 15
     - name: "Back to HQ"
-      url: "https://GothamHQ.com"
+      url: "https://www.StrawberrySSG.com"
       weight: 20
   gotham:
     - name: "Quickstart"
